@@ -32,7 +32,11 @@ export default function Page() {
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl}  className="object-cover h-full w-full" />
+                <AvatarImage
+                  alt={DATA.name}
+                  src={DATA.avatarUrl}
+                  className="object-cover h-full w-full"
+                />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -44,10 +48,9 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-        <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-  {`I'm a Computer Science undergrad at IIIT Kota and a full stack developer who enjoys solving real problems with clean, modern code. Whether it’s a chat app, AI-mock interview platform with voice agent  or an AI-based resume analyzer — I love building stuff that works. On the side, I experiment with new tools and ideas just for fun.`}
-</Markdown>
-
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            {`I'm a Computer Science undergrad at IIIT Kota and a full stack developer who enjoys solving real problems with clean, modern code. Whether it’s a chat app, AI-mock interview platform with voice agent  or an AI-based resume analyzer — I love building stuff that works. On the side, I experiment with new tools and ideas just for fun.`}
+          </Markdown>
         </BlurFade>
       </section>
       <section id="education">
@@ -113,7 +116,8 @@ export default function Page() {
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
-                <ProjectCard className="h-full"
+                <ProjectCard
+                  className="h-full"
                   href={project.href}
                   key={project.title}
                   title={project.title}
@@ -148,7 +152,7 @@ export default function Page() {
                 >
                   Drop me a DM on Twitter
                 </Link>
-                — I usually respond pretty quick (unless it's spam 😅).
+                — I usually respond pretty quick (unless it&rsquo;s spam 😅).
               </p>
             </div>
           </BlurFade>
