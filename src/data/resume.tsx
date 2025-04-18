@@ -146,7 +146,7 @@ export const DATA = {
       dates: "2023",
       active: true,
       description:
-        "A real-time chat app with online status and typing indicators. Backend powered by Socket.io and frontend styled with Shadcn UI.",
+  "A real-time chat app built with Socket.io, featuring responsive UI using Shadcn and TailwindCSS. Users can join chat rooms and exchange messages instantly.",
       technologies: [
         "Next.js",
         "TypeScript",
