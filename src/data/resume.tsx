@@ -25,6 +25,8 @@ export const DATA = {
     "MongoDB",
     "Express.js",
     "Hono",
+    "Cloudflare workers",
+    "C",
     "C++",
     "Python"
   ],
