@@ -9,8 +9,8 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/Kolkata,+West+Bengal",
   description:
     "Full Stack Developer passionate about building scalable web apps and developer tools. Always learning, always building.",
-  summary:
-    "I’m a Computer Science undergrad at IIIT Kota and a full stack developer with a focus on modern web technologies. I’ve built real-time chat apps, AI-powered interview platforms, resume analyzers, and payment integrations. I enjoy solving practical problems with elegant code and love working on open-source and side projects in my spare time.",
+    summary:
+    "I’m a Computer Science undergrad at IIIT Kota and a full stack developer with a focus on modern web technologies. I’ve built real-time chat apps, AI-powered interview platforms, resume analyzers, and payment integrations. I enjoy solving practical problems with elegant code and constantly explore new tools and frameworks through side projects.",  
   avatarUrl: "/me.png",
   skills: [
     "React.js",
@@ -24,12 +24,13 @@ export const DATA = {
     "Docker",
     "MongoDB",
     "Express.js",
+    "Hono",
     "C++",
     "Python"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "arijit@example.com",
@@ -75,7 +76,7 @@ export const DATA = {
 
   projects: [
     {
-      title: "AI Interview Platform",
+      title: "HireGen",
       href: "https://interviewgen.arijit.dev",
       dates: "March 2024 - Present",
       active: true,
@@ -102,7 +103,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/hiregen.png",
       video: "",
     },
     {
