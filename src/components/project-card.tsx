@@ -42,14 +42,12 @@ export function ProjectCard({
 }: Props) {
   return (
     <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
+      className={cn(
+        "group flex flex-col overflow-hidden border rounded-2xl hover:shadow-xl transition-shadow duration-300 bg-background dark:bg-[#111]",
+        className
+      )}
     >
-      <Link
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}
-      >
+      <Link href={href || "#"} className="block cursor-pointer">
         {video && (
           <video
             src={video}
@@ -57,7 +55,7 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none w-full h-44 object-cover object-top"
           />
         )}
         {image && (
@@ -66,28 +64,29 @@ export function ProjectCard({
             alt={title}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className="w-full h-44 object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
           />
         )}
       </Link>
-      <CardHeader className="px-2">
-        <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <time className="font-sans text-xs">{dates}</time>
-          <div className="hidden font-sans text-xs underline print:visible">
-            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
-          </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
-            {description}
-          </Markdown>
-        </div>
+
+      <CardHeader className="px-4 pt-4 space-y-2">
+        <CardTitle className="text-lg font-semibold">{title}</CardTitle>
+        {link && (
+          <p className="text-xs text-muted-foreground underline truncate">
+            {link.replace("https://", "").replace("www.", "").replace("/", "")}
+          </p>
+        )}
       </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
+
+      <CardContent className="px-4 pb-2">
+        <Markdown className="prose max-w-full text-sm text-muted-foreground dark:prose-invert">
+          {description}
+        </Markdown>
         {tags && tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-1">
-            {tags?.map((tag) => (
+          <div className="mt-3 flex flex-wrap gap-1">
+            {tags.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[10px]"
+                className="rounded-full px-2 py-0.5 text-[11px]"
                 variant="secondary"
                 key={tag}
               >
@@ -97,20 +96,29 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
-      <CardFooter className="px-2 pb-2">
-        {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-start gap-1">
-            {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  {link.icon}
-                  {link.type}
-                </Badge>
-              </Link>
-            ))}
-          </div>
-        )}
-      </CardFooter>
+
+      {links && links.length > 0 && (
+  <CardFooter className="px-4 pb-4 mt-auto">
+    <div className="flex flex-wrap gap-2">
+      {links.map((link, idx) => (
+        <Link
+          href={link.href}
+          key={idx}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Badge
+            className="flex items-center gap-2 rounded-full px-3 py-1 text-[11px] dark:bg-white hover:dark:text-white hover:dark:bg-black text-white dark:text-black border border-border shadow-sm hover:bg-muted hover:text-foreground transition"
+          >
+            {link.icon}
+            {link.type}
+          </Badge>
+        </Link>
+      ))}
+    </div>
+  </CardFooter>
+)}
+
     </Card>
   );
 }
