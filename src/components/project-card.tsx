@@ -47,7 +47,7 @@ export function ProjectCard({
         className
       )}
     >
-      <Link href={href || "#"} className="block cursor-pointer">
+      <Link href={href || "#"} className="block cursor-pointer" target="blank">
         {video && (
           <video
             src={video}

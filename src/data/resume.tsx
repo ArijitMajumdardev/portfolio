@@ -77,6 +77,37 @@ export const DATA = {
   ],
 
   projects: [ {
+    title: "Animate",
+    href: "https://animate-lemon.vercel.app/",
+    dates: "2024 - Present",
+    active: true,
+    description:
+      "Animate is an AI tool that generates Manim (Python library for creating mathematical animations) Animations from user prompts.",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "TailwindCSS",
+      "Shadcn UI",
+      "FastAPI",
+      "Python",
+      "Gemini API",
+      "PostgreSQL",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://animate-lemon.vercel.app/",
+        icon: <Icons.globe className="size-3" />,
+      },
+      {
+        type: "Source",
+        href: "https://github.com/ArijitMajumdardev/animate",
+        icon: <Icons.github className="size-3" />,
+      },
+    ],
+    image: "/projects/animate.png",
+    video: "",
+  },{
     title: "HireGen",
     href: "https://hire-gen-xi.vercel.app/",
     dates: "2024 - Present",
@@ -169,32 +200,33 @@ export const DATA = {
       ],
       image: "/projects/chatapp.png",
       video: "",
-    }, {
-      title: "StarSupport",
-      href: "https://github.com/ArijitMajumdardev/starsupportv",
-      dates: "2024",
-      active: true,
-      description:
-        "A fun donation platform inspired by Buy Me a Coffee. Integrated Razorpay for payments.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Next Auth",
-        "TailwindCSS",
-        "Razorpay API",
-        "MongoDB",
-        "Mongoose",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/ArijitMajumdardev/starsupport",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/projects/buymeacoke.png",
-      video: "",
-    }
+    },
+    // {
+    //   title: "StarSupport",
+    //   href: "https://github.com/ArijitMajumdardev/starsupportv",
+    //   dates: "2024",
+    //   active: true,
+    //   description:
+    //     "A fun donation platform inspired by Buy Me a Coffee. Integrated Razorpay for payments.",
+    //   technologies: [
+    //     "Next.js",
+    //     "TypeScript",
+    //     "Next Auth",
+    //     "TailwindCSS",
+    //     "Razorpay API",
+    //     "MongoDB",
+    //     "Mongoose",
+    //   ],
+    //   links: [
+    //     {
+    //       type: "Source",
+    //       href: "https://github.com/ArijitMajumdardev/starsupport",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/projects/buymeacoke.png",
+    //   video: "",
+    // }
   ]
   
   
