@@ -228,6 +228,19 @@ export const DATA = {
     //   video: "",
     // }
   ]
+  , work: [
+    {
+      company: "V4Labs",
+      href: "https://v4labs.tech",
+      badges: [],
+      location: "Remote",
+      title: "Founding Full Stack Engineer",
+      logoUrl: "/v4labs.png",
+      start: "June 2025",
+      end: null,
+      description:
+        "Led a team to design and develop the website for the company and an internal dashboard to manage the content of the website and publish technical blogs. Currently developing MVPs for 2 active clients",
+    },]
   
   
 } as const;

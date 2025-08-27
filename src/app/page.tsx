@@ -1,4 +1,3 @@
-import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -52,6 +51,31 @@ export default function Page() {
             {`I'm a Computer Science undergrad at IIIT Kota and a full stack developer who enjoys solving real problems with clean, modern code. Whether it’s a chat app, AI-mock interview platform with voice agent  or an AI-based resume analyzer — I love building stuff that works. On the side, I experiment with new tools and ideas just for fun.`}
           </Markdown>
         </BlurFade>
+      </section>
+       <section id="work">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Work Experience</h2>
+          </BlurFade>
+          {DATA.work.map((work, id) => (
+            <BlurFade
+              key={work.company}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
+                key={work.company}
+                logoUrl={work.logoUrl}
+                altText={work.company}
+                title={work.company}
+                subtitle={work.title}
+                href={work.href}
+                badges={work.badges}
+                period={`${work.start} - ${work.end ?? "Present"}`}
+                description={work.description}
+              />
+            </BlurFade>
+          ))}
+        </div>
       </section>
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
